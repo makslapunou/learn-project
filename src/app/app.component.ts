@@ -5,7 +5,6 @@ import { CounterService } from "./counter.service";
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
-  providers: [CounterService],
 })
 export class AppComponent {
   constructor(private counterService: CounterService) {}

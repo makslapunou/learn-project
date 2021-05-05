@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { CounterService } from "./counter.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
+  providers: [CounterService],
 })
 export class AppComponent {
-  title = 'learn-project';
+  constructor(private counterService: CounterService) {}
 }

@@ -14,4 +14,8 @@ export class ExtraService {
   decrease() {
     this.counterService.decrease();
   }
+
+  getCounter(): number {
+    return this.counterService.counter;
+  }
 }

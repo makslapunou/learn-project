@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ExtraComponent } from "./extra/extra.component";
 import { Route, Router, RouterModule, Routes } from "@angular/router";
+import { CounterService } from "../counter.service";
+import { ExtraService } from "./extra.service";
 
 const routes: Route[] = [
   {
@@ -13,5 +15,6 @@ const routes: Route[] = [
 @NgModule({
   declarations: [ExtraComponent],
   imports: [CommonModule, RouterModule.forChild(routes)],
+  providers: [CounterService, ExtraService],
 })
 export class ExtraModule {}

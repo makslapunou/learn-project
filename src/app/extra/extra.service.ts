@@ -1,9 +1,7 @@
-import { Injectable } from "@angular/core";
+import { Host, Injectable, Self, SkipSelf } from "@angular/core";
 import { CounterService } from "../counter.service";
 
-@Injectable({
-  providedIn: "root",
-})
+@Injectable()
 export class ExtraService {
   constructor(private counterService: CounterService) {}
 

@@ -3,7 +3,7 @@ import { CounterService } from "../counter.service";
 
 @Injectable()
 export class ExtraService {
-  constructor(private counterService: CounterService) {}
+  constructor(@SkipSelf() private counterService: CounterService) {}
 
   increase() {
     this.counterService.increase();
